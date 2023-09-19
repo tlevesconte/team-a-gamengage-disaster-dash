@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <title>Disaster Dash</title>
+</head>
+<body>
+
+<!--Navbar to hold day/dark mode icons and text-->
+<div class="navbar">
+    <nav>
+        <img src="/images/moon-solid-60.png" id="symbol" alt="moon image">
+        <p id="day-night">Choose Day/Night Mode</p>
+    </nav>
+</div>
+
+<h3>
+    The game is based on different topics.
+</h3>
+
+<p>Choose which topic you want your game to be based on</p>
+
+<p>How confident are you feeling?</p>
+
+<p>Time to make a choice</p>
+
+
+<!--Game choices for players -->
+
+<!--Drought-->
+<div class="container">
+    <div class="holder h1">
+        <h3 id="drought">
+            <a th:href="@{/drought}">drought</a>
+        </h3>
+    </div>
+
+    <!-- Storms-->
+    <div class="holder h2">
+        <h3 id="storms">
+            <a th:href="@{/storms}">storms</a>
+        </h3>
+    </div>
+
+    <!--Epidemics-->
+    <div class="holder h3">
+        <h3 id="epidemics">
+            <a th:href="@{/epidemics}">epidemics</a>
+        </h3>
+    </div>
+
+    <!--Heatwave-->
+    <div class="holder h4">
+        <h3 id="heat">
+            <a th:href="@{/heatwave}">heatwave</a>
+        </h3>
+    </div>
+
+    <!--Soil erosion-->
+    <div class="holder h5">
+        <h3 id="soil">
+            <a th:href="@{/soilErosion}">soil erosion</a>
+        </h3>
+    </div>
+
+</div>
+
+<p>Once you choose a game, the corresponding game screen appears and the game starts</p>
+
+
+
+<!--JavaScript code to handle switching between day/dark mode-->
+<script>
+    const symbol = document.getElementById("symbol");
+        symbol.onclick = function(){
+            document.body.classList.toggle("dark-mode");
+            if(document.body.classList.contains("dark-mode")) {
+            symbol.src = "/images/sun-solid-60.png";
+            }else{
+            symbol.src = "/images/moon-solid-60.png";
+            }
+             }
+</script>
+
+</body>
+</html>
+
+
+
+
+

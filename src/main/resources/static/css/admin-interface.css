@@ -1,0 +1,467 @@
+/* Montserrat Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,200&display=swap');
+
+/* Body */
+body {
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+    margin: 0;
+    font-size: 15px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    background-color: #71C0A4;
+    padding: 5px 15px;
+    filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+}
+
+/* Navbar heading */
+#welcome-heading {
+    color: white;
+    margin-right: auto;
+}
+
+/* Content container */
+.content-container {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    max-width: 80rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Headings */
+h1 {
+    font-size: 25px;
+}
+
+/* Question bank heading */
+#question-bank-heading {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+/* Question bank description */
+#question-bank-description {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+/* For both popups */
+.popup-heading {
+    font-weight: 500;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 35px;
+}
+
+/* Popup subheading */
+h3 {
+    font-weight: 800;
+}
+
+/* Input label */
+label {
+    display: block;
+}
+
+/* General popup styling */
+.popup{
+    font-size: 15px!important;
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 36rem;
+    height: 35rem;
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 0.125rem;
+    overflow-y: scroll;
+}
+
+/* Popup overlay (dim/blur background) */
+#popup-overlay {
+    display: none;
+    position: fixed;
+    background: rgba(34, 34, 34, 0.2);
+    backdrop-filter: blur(8px);
+    height: 100vh;
+    width: 100%;
+}
+
+/* Edit popup */
+#edit-close-button {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+}
+
+/* Edit form */
+#edit-form {
+    border-radius: 0.125rem;
+    background-color: #DEDEDE;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+#show-edit-button {
+    margin-bottom: 5px;
+}
+
+#edit-num-of-choices-input {
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+}
+
+#edit-question-input {
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+}
+
+#edit-choice-a-input {
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+}
+
+#edit-choice-b-input {
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+}
+
+#edit-choice-c-input {
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+}
+
+#edit-choice-d-input {
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+}
+
+#edit-correct-choice-input {
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+}
+
+#edit-hint-input {
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+/* Add button */
+#edit-button {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Edit form end styling */
+.edit-end {
+    border-radius: 0.125rem;
+    background-color: #DEDEDE;
+    margin-bottom: 15px;
+}
+
+/* Make labels bold */
+span {
+    font-weight: 600;
+}
+
+/* Add popup */
+#add-close-button {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+}
+
+/* Add form */
+#add-form {
+    border-radius: 0.125rem;
+    background-color: #DEDEDE;
+    padding: 10px;
+    margin-bottom: 60px;
+}
+
+.question-property-heading {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.question-value-heading {
+    font-size: 18px;
+}
+
+#add-form, label {
+    margin-bottom: 5px;
+}
+
+#add-type-input {
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+
+#add-level-input {
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+
+#add-num-of-choices-input {
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+
+#choice-c-label {
+    display: none;
+}
+
+#add-choice-c-input {
+    display: none;
+}
+
+#choice-d-label {
+    display: none;
+}
+
+#add-choice-d-input {
+    display: none;
+}
+
+#add-question-input {
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+
+#add-choice-a-input {
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+
+#add-choice-b-input {
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+
+}
+
+#add-choice-c-input {
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+
+#add-choice-d-input {
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+
+#add-correct-choice-input {
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+
+#add-hint-input {
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+/* Options HUD */
+#options-hud {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80rem;
+}
+
+/* Add button */
+#add-button {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Add a question button */
+#add-question-button {
+    margin-left: 1rem;
+}
+
+/* Delete form */
+#popup-delete {
+    display: none;
+    width: 25rem;
+    height:9rem;
+    overflow-y: hidden!important;
+}
+
+#popup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#popup-delete-heading {
+    margin-bottom: 25px!important;
+}
+
+#delete-close-button {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+}
+
+#yes-delete {
+    margin-right: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#no-delete {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/* Table styling */
+table {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #71C0A4;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #E3E3E3;
+}
+
+/* Table heading styling */
+/* Drought */
+.drought-heading {
+    background-color: #A36717;
+}
+
+/* Storms */
+.storms-heading {
+    background-color: #02A1E6;
+}
+
+/* Epidemics */
+.epidemics-heading {
+    background-color: #C280FF;
+}
+
+/* Heatwave */
+.heatwave-heading {
+    background-color: #F57328;
+}
+
+/* Soil erosion */
+.soil-erosion-heading {
+    background-color: #555555;
+}
+
+/* Breakpoints */
+/* WIDTH AND HEIGHT */
+@media screen and (max-width: 1525px) {
+    body {
+        font-size: 12px;
+    }
+    #options-hud {
+        max-width: 65rem;
+    }
+    .content-container {
+        max-width: 65rem;
+    }
+}
+@media screen and (max-width: 1040px) {
+    body {
+        font-size: 10px;
+    }
+    #options-hud {
+        max-width: 56rem;
+    }
+    .content-container {
+        max-width: 56rem;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    body {
+        font-size: 9px;
+    }
+    #options-hud {
+        max-width: 50rem;
+    }
+    .content-container {
+        max-width: 50rem;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    body {
+        font-size: 8px;
+    }
+    #options-hud {
+        max-width: 44rem;
+    }
+    .content-container {
+        max-width: 44rem;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    body {
+        font-size: 6px;
+    }
+    #options-hud {
+        max-width: 38rem;
+    }
+    .content-container {
+        max-width: 38rem;
+    }
+}

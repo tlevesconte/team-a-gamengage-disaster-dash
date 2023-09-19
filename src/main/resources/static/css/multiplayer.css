@@ -1,0 +1,343 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.body-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    position: relative;
+    margin: auto;
+    margin-top: 100px;
+    width: 40%;
+    height: 600px;
+    border: gray solid 1px;
+}
+.path{
+    display: flex;
+    
+}
+
+.start-point{
+    z-index: 10;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    width: 140px;
+    height: 100px;
+    background-color: rgba(255, 255, 0, 1);
+    align-items: center;
+    justify-content: center;
+    margin: -1px 0 0 -1px;
+    border: gray solid 1px;
+    border-radius: 0 0 20% 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.end-point{
+    z-index: 10;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    width: 140px;
+    height: 100px;
+    background-color: #aaaa00;
+    align-items: center;
+    justify-content: center;
+    margin: 0 -1px -1px 0;
+    border: gray solid 1px;
+    border-radius: 20% 0 0 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+.path-one-row{
+    width: calc(100% - 240px);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 140px;
+    margin-top: 30px;
+}
+.path-one-col {
+    height: calc(100% - 100px);
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50px;
+    margin-right: 20px;
+}
+.path-two-col{
+    height: calc(100% - 100px);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50px;
+    margin-left: 20px;
+}
+.path-two-row{
+    width: calc(100% - 240px);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 140px;
+    margin-bottom: 30px;
+}
+.grid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 40px;
+    /* border: #000000 solid 1px; */
+    border-radius: 20%;
+    box-shadow: 2px 5px 3px #717171;
+}
+.blue{
+    background-color: #016FA0;
+}
+.gray{
+    background-color: #D7D7D7;
+}
+.middleContent{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 180px);
+    height: 420px;
+    background-color: white;
+}
+.title{
+    position: absolute;
+    left: 50%;
+    top: 7%;
+    transform: translate(-50%, -7%);
+}
+.title p {
+    font-weight: bold;
+}
+.hint{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 140px);
+    height: 280px;
+    /* background-color: #3e3e3e; */
+    overflow: hidden;
+}
+
+.hint article{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: -17px;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-size: 14px;
+}
+
+.start-button{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #016FA0;
+    border: #000000 solid 1px;
+    box-shadow: 5px 5px 5px #717171;
+}
+.start-button button {
+    background:none;
+    border: none;
+    font-size: 32px;
+
+}
+
+.storm-playerA{
+    background-color: #016FA0;
+}
+.storm-playerB{
+    background-color: #D7D7D7;
+}
+.storm-BGC{
+    background-color: rgba(2, 161, 230, 0.5725490196078431);
+}
+.storm-font-color{
+    color: #016FA0;
+}
+.drought-playerA{
+    background-color: #A36717;
+}
+.drought-playerB{
+    background-color: #F59A23;
+}
+.drought-BGC{
+    background-color: #FACD91;
+}
+.drought-font-color{
+    color: #A36717;
+}
+.epidemics-playerA{
+    background-color: rgba(132, 0, 255, 0.788235294117647);
+}
+.epidemics-playerB{
+    background-color: #016FA0;
+}
+.epidemics-BGC{
+    background-color: rgba(194, 128, 255, 0.788235294117647);
+}
+.epidemics-font-color{
+    color: #8400FF;
+}
+.heatwave-playerA{
+    background-color: #9C2C77;
+}
+.heatwave-playerB{
+    background-color: #F1EFDC;
+}
+.heatwave-BGC{
+    background-color: rgba(245, 115, 40, 1);
+}
+.heatwave-font-color{
+    color: #F57328;
+}
+.soil-playerA{
+    background-color: #000000;
+}
+.soil-playerB{
+    background-color: #555555;
+}
+.soil-BGC{
+    background-color: rgba(215, 215, 215, 1);
+}
+.soil-font-color{
+    color: #000000;
+}
+.background-filter{
+    filter: blur(5px);
+    opacity: 70%;
+}
+/* ========================================================== */
+
+.platform:hover{
+    cursor:pointer;
+}
+.platformP2:hover{
+    cursor:pointer;
+}
+  .modal {
+    z-index: 1000;
+    width: 35%;
+    min-height: 150px;
+    position: fixed;
+    top: 250px;
+    left: 50%;
+    transform: translate(-50%,0);
+    background-color: rgba(215, 215, 215, 0.87);
+    border-radius: 20px;
+    /*display: none;*/
+}
+    
+  
+  #question{
+    margin: 30px 0;
+    padding: 0 30px;
+}
+#question2{
+    margin: 30px 0;
+    padding: 0 30px;
+}
+  .btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+    justify-content: space-around;
+  }
+  .btn-grid button{
+    width: 130px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    font-weight: bolder;
+}
+  :root{
+    --hue-neutral: 200;
+  }
+ 
+  .ansbtn:hover {
+    border-color: yellow;
+  }
+ 
+  .ansbtnP2:hover {
+    border-color: yellow;
+  }
+  .feedback{
+    display: none;
+    border-top: #000000 solid 1px;
+    margin: 30px 0 20px 0;
+    padding: 10PX 30px 0 30PX;
+}
+.countDown{
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    font-weight: bold;
+}
+  .playerA{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border: #000000 solid 1px;
+    border-radius: 50%;
+    position: absolute;
+    top: 40px;
+    left: 80px;
+    z-index: 100;
+    text-align:center;
+}
+.playerB{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border: #000000 solid 1px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    z-index: 100;
+    text-align:center;
+}
+
+.correct {
+    background-color: green;
+}
+
+.incorrect {
+    background-color: red;
+}

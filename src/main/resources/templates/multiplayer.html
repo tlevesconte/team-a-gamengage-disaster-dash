@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/multiplayer.css}">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.4.0/sockjs.min.js"></script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <style> h1 {text-align: center}</style>
+</head>
+<body>
+<header><h1>Multiplayer Quiz</h1></header>
+
+<input id="login" placeholder="Enter PlayerName Here">
+<button onclick="create_game()">Create New Game</button>
+<button onclick="connectToRandom()">Connect to a random existing game as Player 2</button>
+<!--<div>-->
+<!--    <input id="game_id" placeholder="Enter existing game Id">-->
+<!--    <button onclick="connectToSpecificGame()">Connect via game ID to existing game</button>-->
+<!--</div>-->
+
+    <div class="body-content">
+
+            <!-- Modal starts from here -->
+            <div id="myModal" class="modal" >
+
+
+                <div class="modal-content" >
+                        <div id="question">What is an Epidemic?</div>
+                        <div class="btn-grid">
+                          <button class="ansbtn" id="A">Answer 1</button>
+                          <button class="ansbtn" id="B">Answer 2</button>
+                          <button class="ansbtn" id="C">Answer 3</button>
+                          <button class="ansbtn" id="D">Answer 4</button>
+                        </div>
+                        <div id="hint">Hello</div>
+              </div>
+              
+              </div>
+
+
+                    </div>
+    <script th:src="@{/js/multiplayer.js}"></script>
+<script th:src="@{/js/socket.js}"></script>
+</body>
+</html>

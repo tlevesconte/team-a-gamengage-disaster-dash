@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" th:href="@{/css/registration-interface.css}">
+    <title>Create Account</title>
+</head>
+<body>
+    <div class="registration-container">
+        <a class="menu-items" th:href="@{/}">Back</a>
+        <form class="registration-box" th:action="@{/api/registration}" method="post">
+            <!-- Heading (can change to an img later on if we have a logo)-->
+            <h1>DisasterDash</h1>
+            <h2>Create Account</h2>
+            <!-- Name -->
+            <label for="username-input"></label><input type="text" name="username" id="username-input" placeholder="Username">
+            <!-- Password -->
+            <label for="password-input"></label><input type="password" name="password" id="password-input" placeholder="Password">
+            <!-- Button -->
+            <button type="submit">Create Account</button>
+            <!-- Redirect user to the log-in page -->
+            <p>Already have an account? <a th:href="@{/login}">Log In</a></p>
+        </form>
+    </div>
+</body>
+</html>

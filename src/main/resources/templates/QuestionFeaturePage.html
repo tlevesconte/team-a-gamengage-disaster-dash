@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/QuestionFeature.css}">
+</head>
+<body>
+    <div class="body-content">
+        <div class="content storm-BGC">
+            <div class="start-point">
+                <span>Start</span>
+            </div>
+            <div class="path">
+                
+                <ul class="path-one-row">
+                    
+                    <li class="grid blue platform" ></li>
+                    <li class="grid blue platform" ></li>
+                    <li class="grid blue platform" ></li>
+                    <li class="grid blue platform" ></li>
+                </ul>
+                
+                <ul class="path-one-col">
+                    <li class="grid blue platform" ></li>
+                    <li class="grid blue platform"></li>
+                    <li class="grid blue platform"></li>
+                    <li class="grid blue platform"></li>
+                    <li class="grid blue platform"></li>
+                </ul>
+            </div>
+            <div class="path">
+                
+                <ul class="path-two-col">
+                    <li class="grid gray platformP2"></li>
+                    <li class="grid gray platformP2"></li>
+                    <li class="grid gray platformP2"></li>
+                    <li class="grid gray platformP2"></li>
+                    <li class="grid gray platformP2"></li>
+                </ul>
+
+                <ul class="path-two-row">
+
+                    <li class="grid gray platformP2"></li>
+                    <li class="grid gray platformP2"></li>
+                    <li class="grid gray platformP2"></li>
+                    <li class="grid gray platformP2"></li>
+                </ul>
+                
+            </div>
+            <div class="middleContent">
+                <div class="title">
+                    <p class="storm-font-color">Storms</p>
+                </div>
+                <div class="hint" style="display: none;">
+                    <article class="storm-BGC">
+                        <p>The game will start automatically.</p>
+                        <p>Each player will be presented with a question on floods</p>
+                        <p>Questions will appear here and a timer (10s) will start <br>
+                            Multiple choice (4) answers for player to choose from <br>
+                            If the answer is correct, player is moved a step ahead <br>
+                            If initial answer is wrong, player is presented with a hint <br>
+                            The hint will be a popup that appears here <br>
+                            If the player still gets the answer wrong after hint, they <br>
+                            do not get to move a step ahead, they remain in the <br>
+                            same position
+                        </p>
+                    </article>
+                </div>
+                <div class="start-button">
+                    <button>Go</button>
+                </div>
+            </div>
+            
+            <!-- Modal starts from here -->
+            <div id="myModal" class="modal" >
+
+
+                <div class="modal-content" >
+                        <div id="question">What is an Epidemic?</div>
+                        <div class="btn-grid">
+                          <button class="ansbtn" id="A">Answer 1</button>
+                          <button class="ansbtn" id="B">Answer 2</button>
+                          <button class="ansbtn" id="C">Answer 3</button>
+                          <button class="ansbtn" id="D">Answer 4</button>
+                        </div>
+                        <div id="hint">Hello</div>
+                        <div class="countDown storm-font-color">
+                            <p id="time">30s</p>
+                        </div>
+              </div>
+              
+              </div>
+              <div id="myModalP2" class="modal">
+
+
+                <div class="modal-content">
+                        <div id="question2">What is an Epidemic?</div>
+                        <div class="btn-grid">
+                          <button class="ansbtnP2" id="A2">Answer 1</button>
+                          <button class="ansbtnP2" id="B2">Answer 2</button>
+                          <button class="ansbtnP2" id="C2">Answer 3</button>
+                          <button class="ansbtnP2" id="D2">Answer 4</button>
+                        </div>
+                        <div id="hint2">Hello</div>
+                        <div class="countDown storm-font-color">
+                            <p id="time2">30s</p>
+                        </div>
+              </div>
+              
+              </div>
+            <div class="playerA">A</div>
+            <div class="playerB">B</div>
+            <div class="end-point">
+                <span>End</span>
+            </div>
+        </div>
+    </div>
+    <script th:src="@{/js/QuestionFeature.js}"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" th:href="@{/css/option-interface.css}">
+    <title>Option</title>
+</head>
+<body>
+    <div class="menu-container">
+        <a id="back-item" th:href="@{/}">Back</a>
+        <a id="menu-item" th:href="@{/login}">Log In</a>
+        <a th:href="@{/register}">Create Account</a>
+    </div>
+    <div class="content-container">
+        <h1>DisasterDash</h1>
+        <p id="description">A climate change/resilience game.</p>
+        <img th:src="@{/images/optional-image.png}" th:alt="test">
+        <p id="question">Do you want to see the game's tutorial?</p>
+        <div class="yes-or-no-options">
+            <a id="yes-option" th:href="@{/tutorial}">Yes</a>
+            <a id="no-option" th:href="@{/gameLevels}">No</a>
+        </div>
+    </div>
+</body>
+</html>

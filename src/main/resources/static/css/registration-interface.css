@@ -1,0 +1,98 @@
+/* Montserrat Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,200&display=swap');
+
+/* General */
+html,
+body {
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: #FAB696;
+}
+
+/* Heading */
+h1 {
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Sub-heading */
+h2 {
+    font-weight: 400;
+}
+
+/* Paragraph */
+p {
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Back */
+.menu-items {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+/* Container */
+.registration-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: auto;
+    max-width: 56rem;
+}
+
+/* Form */
+.registration-box {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 0.125rem;
+    padding: 30px 30px 30px 30px;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    
+}
+
+/* Input Field */
+input {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    width: 350px;
+    height: 35px;
+    margin-bottom: 15px;
+    border-width: .25px;
+    border-style: solid;
+    border-radius: 0.125rem; 
+    border-color: #747474;
+}
+
+input:focus {
+    outline: 2px solid #FAB696;
+}
+
+/* Button */
+button {
+    font-family: 'Montserrat', sans-serif;  
+    font-size: 15px;
+    font-weight: 400;
+    color: white;
+    background: #FAB696;
+    height: 35px;
+    border: none;
+    border-radius: 0.125rem; 
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background: #FCCDB7;
+    cursor: pointer;
+}

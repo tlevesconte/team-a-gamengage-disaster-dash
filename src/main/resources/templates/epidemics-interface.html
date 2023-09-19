@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/disasters-interface.css}">
+    <script type="text/javascript" th:src="@{/js/ajax.js}"></script>
+    <script type="text/javascript" th:src="@{/js/disasters-interface.js}" defer="true"></script>
+</head>
+<body>
+
+<!--Navbar to hold day/dark mode icons and text-->
+<div class="navbar">
+    <nav>
+        <img src="/images/moon-solid-60.png" id="symbol" alt="moon image">
+        <p id="day-night">Choose Day/Night Mode</p>
+    </nav>
+</div>
+
+<div id="bodyContent" class="body-content">
+    <div class="content epidemics-BGC">
+        <div class="start-point">
+            <span>Start</span>
+        </div>
+        <div class="path">
+
+            <ul class="path-one-row">
+                <li class="grid epidemics-playerA"></li>
+                <li class="grid epidemics-playerA"></li>
+                <li class="grid epidemics-playerA"></li>
+                <li class="grid epidemics-playerA"></li>
+                <li class="grid epidemics-playerA"></li>
+            </ul>
+            <ul class="path-one-col">
+                <li class="grid epidemics-playerA"></li>
+                <li class="grid epidemics-playerA"></li>
+                <li class="grid epidemics-playerA"></li>
+                <li class="grid epidemics-playerA"></li>
+            </ul>
+        </div>
+        <div class="path">
+
+            <ul class="path-two-row">
+                <li class="grid epidemics-playerB"></li>
+                <li class="grid epidemics-playerB"></li>
+                <li class="grid epidemics-playerB"></li>
+                <li class="grid epidemics-playerB"></li>
+                <li class="grid epidemics-playerB"></li>
+            </ul>
+            <ul class="path-two-col">
+                <li class="grid epidemics-playerB"></li>
+                <li class="grid epidemics-playerB"></li>
+                <li class="grid epidemics-playerB"></li>
+                <li class="grid epidemics-playerB"></li>
+            </ul>
+        </div>
+        <div class="middleContent">
+            <div class="title">
+                <p class="epidemics-font-color">Epidemics</p>
+            </div>
+            <div class="noteBoard">
+                <article class="epidemics-BGC">
+                    <p>The game will start automatically.</p>
+                    <p>Each player will be presented with a question on epidemics</p>
+                    <p>Questions will appear here and a timer (10s) will start
+                        Multiple choice (4) answers for player to choose from
+                        If the answer is correct, player is moved a step ahead
+                        If initial answer is wrong, player is presented with a hint
+                        The hint will be a popup that appears here
+                        If the player still gets the answer wrong after hint, they
+                        do not get to move a step ahead, they remain in the
+                        same position
+                    </p>
+                </article>
+            </div>
+            <div class="closeButton" title="close"></div>
+            <div id="startButton" class="epidemics-start-button">
+                <button>Start</button>
+            </div>
+            <div class="quiz epidemics-BGC">
+                <p class="question">this is a question?</p>
+                <div>
+                    <button class="answer answerA">True</button>
+                </div>
+                <div>
+                    <button class="answer answerB">False</button>
+                </div>
+            </div>
+            <div class="countDown">
+                <p id="time">15s</p>
+            </div>
+            <div class="hintBox"></div>
+            <div class="hintButton" title="Hint"></div>
+        </div>
+        <div class="playerA playerA-img"></div>
+        <div class="playerB playerB-img"></div>
+        <div class="end-point">
+            <span>End</span>
+        </div>
+        <div class="scoreBox">
+            <div class="playerBox">
+                <div id="BoxPlayerA">
+                    <p class="playerBox-name">player A</p>
+                    <div class="playerImg playerA-img"></div>
+                </div>
+                <div class="playerScore">
+                    <div class="star"></div>  x  <span class="playerAScore">0</span>
+                </div>
+            </div>
+            <div class="playerBox">
+                <div id="BoxPlayerB">
+                    <p class="playerBox-name">player B</p>
+                    <div class="playerImg playerB-img"></div>
+                </div>
+                <div class="playerScore">
+                    <div class="star"></div>  x  <span class="playerBScore">0</span>
+                </div>
+            </div>
+            
+            <div id="arrows" class="arrows"></div>
+        </div>
+        <div>
+            <img th:src="@{/images/star.png}" alt="" class="correctStar">
+        </div>
+        <div>
+            <img th:src="@{/images/incorrect.svg}" alt="" class="incorrectImg">
+        </div>
+    </div>
+</div>
+
+<!--JavaScript code to handle switching between day/dark mode-->
+<script>
+        const symbol = document.getElementById("symbol");
+           symbol.onclick = function(){
+            document.body.classList.toggle("dark-mode");
+            if(document.body.classList.contains("dark-mode")) {
+            symbol.src = "/images/sun-solid-60.png";
+            }else{
+            symbol.src = "/images/moon-solid-60.png";
+             }
+            }
+</script>
+
+</body>
+</html>
+
+
+

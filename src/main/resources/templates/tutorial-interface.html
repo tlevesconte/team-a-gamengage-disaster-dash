@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" th:href="@{/css/tutorial-interface.css}">
+    <title>Tutorial</title>
+</head>
+<body>
+    <div class="menu-container">
+        <a id="back-item" th:href="@{/option}">Back</a>
+        <a id="menu-item" th:href="@{/login}">Log In</a>
+        <a th:href="@{/register}">Create Account</a>
+    </div>
+    <div class="content-container">
+        <h1>DisasterDash</h1>
+        <p id="description">A climate change/resilience game.</p>
+        <div class="tutorial-text-container">
+            <h2>How to play</h2>
+            <p id="additional-information">(It's a two player game)</p>
+            <p id="tutorial-paragraph">At the start of the game, each player has to answer a series of questions
+                based on the climate change disaster chosen and each player has to take a
+                path to the finish line. If they answer a question correctly, they move
+                forward to the next square. If they get the answer wrong, they are presented
+                with a hint for the correct answer. If they still give the wrong answer, then
+                they do not get to move to the next square, they stay in their position, and
+                it is the turn of the second player to go... The first to the finish line wins
+                the game.</p>
+            <p id="additional-tutorial-text">*When there is a winner (first to reach the "finish" line) there is a debrief session.
+                Approximate playing time: 30 minutes.</p>
+            <a id="next-link" th:href="@{/gameLevels}">Next</a>
+        </div>
+    </div>
+</body>
+</html>

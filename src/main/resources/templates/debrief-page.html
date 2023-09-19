@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- CSS Stylesheet & Thymeleaf-->
+    <link rel="stylesheet" th:href="@{/css/debrief-page.css}">
+    <!--JavaScript for debrief prompts-->
+    <script type="text/javascript" th:src="@{/js/debrief-prompts.js}" defer="true"></script>
+    <title>Debrief Page</title>
+</head>
+<body>
+<h1>Disaster Dash</h1>
+<p class="type-of-game"> A climate change and resilience game</p>
+<div class="debrief-section">
+<p class="time-to-debrief">Time to debrief</p>
+<p class="share-experience">Take turns to click the button below to generate questions that will prompt you to share your experiences with each other</p>
+
+    <div class="container">
+        <!-- First user icon for player A-->
+    <img id="user1-image" src="/images/user 2.png" alt="user 1">
+        <div id="question">Are you ready to start talking about your experiences?</div>
+        <!--Button to click for debrief question prompts-->
+        <button id="next">Click me</button>
+        <p id="pprompt"></p>
+
+       <!-- Second User icon for player B-->
+    <img id="user2-image" src="/images/user 2.png" alt="user 2">
+    </div>
+
+<p id="go-to-another-game">Fancy another game?</p>
+    <!--Button that takes player back to game levels page-->
+    <a th:href="@{/gameLevels}">
+    <button class="the-end">Go</button>
+    </a>
+
+</div>
+</body>
+</html>

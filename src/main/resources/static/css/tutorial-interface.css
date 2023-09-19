@@ -1,0 +1,188 @@
+/* Montserrat Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,200&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    height: 100%;
+    margin: 0;
+}
+
+/* Heading */
+h1 {
+    color: #333333;
+    font-size: 42px;
+    margin-top:18px;
+    margin-bottom: 0;
+}
+
+/* Description under heading */
+#description {
+    color: #555555;
+    margin-top: 12px;
+    margin-bottom: 22px;
+}
+
+/* Menu items container */
+.menu-container {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 62.85rem;
+}
+
+/* Item within the menu container */
+#menu-item {
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+/* Main content container */
+.content-container {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 62.85rem;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}
+
+/* Whole tutorial text */
+.tutorial-text-container {
+    background-color: #71C0A4;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 500px;
+}
+
+/* Subheading within the tutorial text */
+h2 {
+    margin-top: 70px;
+}
+
+/* Information below heading 2*/
+#additional-information {
+    margin-top: 0;
+}
+
+/* Main tutorial text */
+#tutorial-paragraph {
+    margin-top: 10px;
+    max-width: 60rem;
+}
+
+/* Additional info */
+#additional-tutorial-text {
+    max-width: 60rem;
+    margin-bottom: 45px;
+}
+
+/* Next link*/
+#next-link {
+    margin-right: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 0.375rem;
+    padding: 10px 50px;
+    background-color: #FAB696;
+}
+
+/* Breakpoints */
+@media screen and (max-width: 1040px), screen and (max-height: 1040px) {
+    .tutorial-text-container  {
+        height: 425px;
+    }
+    .menu-container {
+        max-width: 56rem;
+    }
+    .content-container {
+        max-width: 56rem;
+    }
+    h2 {
+        margin-top: 25px;
+    }
+    #tutorial-paragraph {
+        max-width: 53rem;
+    }
+    #additional-tutorial-text {
+        max-width: 53rem;
+    }
+}
+
+@media screen and (max-width: 940px), screen and (max-height: 940px) {
+    .tutorial-text-container  {
+        height: 400px;
+    }
+    .menu-container {
+        max-width: 50rem;
+    }
+    .content-container {
+        max-width: 50rem;
+    }
+    h2 {
+        margin-top: 15px;
+    }
+    #tutorial-paragraph {
+        max-width: 46rem;
+    }
+    #additional-tutorial-text {
+        max-width: 46rem;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 840px), screen and (max-height: 840px) {
+    .tutorial-text-container  {
+        height: 375px;
+    }
+    .menu-container {
+        max-width: 44rem;
+    }
+    .content-container {
+        max-width: 44rem;
+    }
+    h2 {
+        margin-top: 5px;
+    }
+    #tutorial-paragraph {
+        max-width: 40rem;
+    }
+    #additional-tutorial-text {
+        max-width: 40rem;
+    }
+}
+
+@media screen and (max-width: 740px), screen and (max-height: 740px) {
+    .tutorial-text-container  {
+        height: 325px;
+    }
+    .menu-container {
+        max-width: 38rem;
+    }
+    .content-container {
+        max-width: 38rem;
+    }
+    h2 {
+        margin-top: 15px;
+    }
+    #additional-information {
+        font-size: 12px;
+    }
+    #tutorial-paragraph {
+        font-size: 12px;
+        max-width: 35rem;
+    }
+    #additional-tutorial-text {
+        font-size: 12px;
+        max-width: 35rem;
+    }
+}

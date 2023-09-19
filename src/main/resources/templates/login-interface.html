@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" th:href="@{/css/login-interface.css}">
+    <title>Log In</title>
+</head>
+<body>
+    <div class="auth-container">
+        <a class="menu-items" th:href="@{/}">Back</a>
+        <form class="auth-box" th:action="@{/login}" method="post">
+            <!-- Heading (can change to an img later on if we have a logo)-->
+            <h1>DisasterDash</h1>
+            <h2>Log In</h2>
+            <!-- Email -->
+            <label for="username-input"></label><input type="text" name="username" id="username-input" placeholder="Username">
+            <!-- Password -->
+            <label for="password-input"></label><input type="password" name="password" id="password-input" placeholder="Password">
+            <!-- Button -->
+            <button type="submit">Log In</button>
+            <!-- Alerts -->
+            <p th:if="${param.error}" class="alert-error-message">Invalid username or password. Please try again.</p>
+            <p th:if="${param.logout}" class="alert-success-message">You have successfully logged out!</p>
+            <p th:if="${param.success}" class="alert-success-message">You have successfully created an account! <br>Please try to log in.</p>
+            <!-- Redirect user to the registration page -->
+            <p>Don't have an account? <a th:href="@{/register}">Sign up</a></p>
+        </form>
+    </div>
+</body>
+</html>
